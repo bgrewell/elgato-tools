@@ -34,5 +34,6 @@ func main() {
 		keylight.SetBrightness(100)
 		time.Sleep(2 * time.Second)
 		keylight.SetTemperature(5000)
+		keylight.SetOn(false)
 	}
 }

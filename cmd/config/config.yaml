@@ -1,0 +1,12 @@
+---
+lights:
+  BW17K1A05886:
+    name: left
+    setting:
+      brightness: 100
+      temperature: 3000
+  BW17K1A05887:
+    name: right
+    setting:
+      brightness: 75
+      temperature: 3000

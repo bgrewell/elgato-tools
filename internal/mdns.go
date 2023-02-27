@@ -1,7 +1,6 @@
 package internal
 
 import (
-	"fmt"
 	"github.com/bgrewell/elgato-tools/internal/types"
 	"github.com/hashicorp/mdns"
 )
@@ -25,7 +24,6 @@ func Discover(service string, filter *string) (entries []*types.ServiceEntry, er
 	go func() {
 		for entry := range entriesCh {
 			if filter != nil && contains(entry.InfoFields, *filter) {
-				fmt.Printf("Got new entry: %v\n", entry)
 				entries = append(entries, ConvertServiceEntry(entry))
 			}
 		}

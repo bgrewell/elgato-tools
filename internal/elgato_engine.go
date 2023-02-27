@@ -28,7 +28,6 @@ func (ee *ElgatoEngine) parseDevices() {
 		if err != nil {
 			fmt.Printf("error: %v\n", err)
 		}
-		fmt.Printf("%v\n", info)
 
 		switch info.ProductName {
 		case "Elgato Key Light":
@@ -41,21 +40,5 @@ func (ee *ElgatoEngine) parseDevices() {
 		default:
 			fmt.Printf("unknown device type: %s\n", info.ProductName)
 		}
-		// 1: Call accessory-info api and get info on accessory
-		// 2: Store that information
-		// 3: Call API's based on features of device
-
-		//device_type := deviceType(device)
-		//switch device_type {
-		//case "key_light":
-		//	kl := ElgatoKeyLight{}
-		//	err := kl.Parse(device)
-		//	if err != nil {
-		//		fmt.Printf("error: %v\n", err)
-		//	}
-		//	ee.KeyLights = append(ee.KeyLights, &kl)
-		//default:
-		//
-		//}
 	}
 }
